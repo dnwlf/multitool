@@ -1,0 +1,3 @@
+# save prompt history
+export PROMPT_COMMAND='history -a'
+export HISTFILE=/commandhistory/.zsh_history

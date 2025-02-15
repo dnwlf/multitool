@@ -1,0 +1,25 @@
+services:
+  tools:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    working_dir: /multitool
+    volumes:
+      - ~/.gitconfig:/root/.gitconfig
+      - tools_kube:/root/.kube
+      - tools_gcloud:/root/.config/gcloud
+      - tools_terminalhistory:/commandhistory
+      - ${PWD}:/multitool
+    network_mode: host
+volumes:
+  tools_kube:
+    driver: local
+    driver_opts:
+      type: none
+      device: ~/.kube
+      o: bind
+  tools_gcloud:
+  tools_terminalhistory:
+      

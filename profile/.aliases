@@ -1,0 +1,6 @@
+# kubectl
+alias k='kubectl'
+alias kc='kubectl'
+alias kcgc='kubectl config get-contexts'
+alias kccc='kubectl config current-context'
+alias kcuc='kubectl config use-context'
